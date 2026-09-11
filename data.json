@@ -1,0 +1,45 @@
+{
+  "stats": {
+    "weekly": 92,
+    "monthly": 386,
+    "yearly": 1232
+  },
+  "about": {
+    "title": "Tentang Website Ini",
+    "subtitle": "Nash Studio Official Archive",
+    "description": [
+      "Website ini adalah arsip sertifikat yang dikumpulkan sejak tahun 2022 dengan berbagai kategori kualifikasi.",
+      "Diluncurkan oleh Nash Studio (Muhadzdzib Nashrulloh, a.k.a Nashrul), mahasiswa semester 7 prodi Hukum Keluarga Islam di STDI Imam Syafi'i Jember."
+    ]
+  },
+  "certificates": [
+    {
+      "id": "cert-1",
+      "title": "Sertifikat Pemahaman & Studi Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1sRXSvHwwRcEx_zv9f21NtJvHNyodOgrq",
+      "date": "2024"
+    },
+    {
+      "id": "cert-2",
+      "title": "Sertifikat Kemampuan Bahasa & Komunikasi",
+      "category": "Bahasa",
+      "imageUrl": "https://lh3.googleusercontent.com/d/15nbyeJJR27Pf90t9of662JJUBXpptDag",
+      "date": "2024"
+    },
+    {
+      "id": "cert-3",
+      "title": "Sertifikat Kualifikasi Karya Tulis Ilmiah",
+      "category": "Karya Ilmiah",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1bccfex3tM1OqslawJZyre1oo0j9K4-rv",
+      "date": "2023"
+    },
+    {
+      "id": "cert-4",
+      "title": "Sertifikat Kewirausahaan & Business Plan",
+      "category": "Enterpreneur",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1fY5ts9IpJio-r3OVSNGAVaGJROSaPT1L",
+      "date": "2023"
+    }
+  ]
+}
