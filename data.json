@@ -1,15 +1,15 @@
 {
   "stats": {
-    "weekly": 92,
-    "monthly": 386,
-    "yearly": 1232
+    "weekly": 32,
+    "monthly": 205,
+    "yearly": 1096
   },
   "about": {
     "title": "Tentang Website Ini",
     "subtitle": "Nash Studio Official Archive",
     "description": [
-      "Website ini adalah arsip sertifikat yang dikumpulkan sejak tahun 2022 dengan berbagai kategori kualifikasi.",
-      "Diluncurkan oleh Nash Studio (Muhadzdzib Nashrulloh, a.k.a Nashrul), mahasiswa semester 7 prodi Hukum Keluarga Islam di STDI Imam Syafi'i Jember."
+      "Website ini adalah kumpulan arsip sertifikat yang dikumpulkan sejak tahun 2022 dengan berbagai kategori kualifikasi.",
+      "Diluncurkan oleh Nash Studio (Muhadzdzib Nashrulloh, a.k.a Nashrul), mahasiswa semester 7 di Prodi Hukum Keluarga Islam STDI Imam Syafi'i Jember."
     ]
   },
   "certificates": [
@@ -40,6 +40,444 @@
       "category": "Enterpreneur",
       "imageUrl": "https://lh3.googleusercontent.com/d/1fY5ts9IpJio-r3OVSNGAVaGJROSaPT1L",
       "date": "2023"
+    },
+    {
+      "id": "cert-5",
+      "title": "Sertifikat Artificial Intelligence & Teknologi",
+      "category": "AI",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1vpsCGLjiOLlx2lp8BUWNi1xkwqztctAO"
+    },
+    {
+      "id": "cert-6",
+      "title": "Sertifikat Studi Psikologi Islam",
+      "category": "Psikologi Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1nQ7kRZUB7AozmgJ519X4cS_bFDMrZqdg"
+    },
+    {
+      "id": "cert-7",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1QHH0sbHzJCdyRT48cR6g4YPmehDXZ5SF"
+    },
+    {
+      "id": "cert-8",
+      "title": "Sertifikat Bidang Pendidikan & Pengajaran",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1IJnm4IITHA7Oq5M2A5E4NZMrxl0MTHXW"
+    },
+    {
+      "id": "cert-9",
+      "title": "Sertifikat Kewirausahaan & Pengembangan Bisnis",
+      "category": "Enterpreneur",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1izhRCTDnK1553LXZw2nxD4eXa8fbonoe"
+    },
+    {
+      "id": "cert-10",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1C_VcYanku7kv6LLYy9v6JP41QjlhIvpO"
+    },
+    {
+      "id": "cert-11",
+      "title": "Sertifikat Penulisan Karya Ilmiah",
+      "category": "Karya Ilmiah",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1d62Vp2dA29A0eIb1THYlKeiwXETh7oZ0"
+    },
+    {
+      "id": "cert-12",
+      "title": "Sertifikat Pelatihan Enterpreneurship",
+      "category": "Enterpreneur",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1eEBoTFVzCCJ87uoXeJynCi2LTp5B6wCT"
+    },
+    {
+      "id": "cert-13",
+      "title": "Sertifikat Pengembangan Usaha",
+      "category": "Enterpreneur",
+      "imageUrl": "https://lh3.googleusercontent.com/d/19Qre5yNv8o5OMVKuuVfZEyM6pO4b8RCN"
+    },
+    {
+      "id": "cert-14",
+      "title": "Sertifikat Kompetensi Pendidikan",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/189Q8tgYa9PCy3zdovy4Z4ScIE2Ebghml"
+    },
+    {
+      "id": "cert-15",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1K8muIHfp79vyErXBm952OBcExhO1tbDe"
+    },
+    {
+      "id": "cert-16",
+      "title": "Sertifikat Publikasi & Karya Ilmiah",
+      "category": "Karya Ilmiah",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1aFdVqFZ4QBRAamNcD7_XIY4Ycc8JpBAo"
+    },
+    {
+      "id": "cert-17",
+      "title": "Sertifikat Riset & Karya Tulis",
+      "category": "Karya Ilmiah",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1_y89Xxptps1qMJkarS4mLQgqGefigtOV"
+    },
+    {
+      "id": "cert-18",
+      "title": "Sertifikat Metode Pendidikan",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1hIq57h-A00b9Szz8-qodhU8mvhzA80C1"
+    },
+    {
+      "id": "cert-19",
+      "title": "Sertifikat Keilmuan Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1h3lgPQfPd4dubsJMqzPoKicex0NVqaEe"
+    },
+    {
+      "id": "cert-20",
+      "title": "Sertifikat Penguasaan Bahasa",
+      "category": "Bahasa",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1R8FGuj-DGxgSrDfzKNC7Lft5nemkph1o"
+    },
+    {
+      "id": "cert-21",
+      "title": "Sertifikat Kajian & Literatur Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/16rNVdifCr4xeXRcIE3t6VvuOl8c6LA2b"
+    },
+    {
+      "id": "cert-22",
+      "title": "Sertifikat Pelatihan Komunikasi Public",
+      "category": "Komunikasi",
+      "imageUrl": "https://lh3.googleusercontent.com/d/19q_cm2HH2dNH0SYBr5hCyK6XdW84qAH_"
+    },
+    {
+      "id": "cert-23",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1SegYKqdublOlPVfeK3bQGY8FYr9hWlGZ"
+    },
+    {
+      "id": "cert-24",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1ykmY32R2spgGp_D2nQgbbEgaGTn868eo"
+    },
+    {
+      "id": "cert-25",
+      "title": "Sertifikat Akademik Karya Ilmiah",
+      "category": "Karya Ilmiah",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1KOLuIsPU6Qc5odKtHHmrCdK5ozV_AJOG"
+    },
+    {
+      "id": "cert-26",
+      "title": "Sertifikat Lokakarya Pendidikan",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1QGbSKo2A9ZIH5YJZAils6FfOUHZFQwva"
+    },
+    {
+      "id": "cert-27",
+      "title": "Sertifikat Pengembangan Diri",
+      "category": "Self Development",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Esatfd5zzWe1fZMNeYG1bkrrhLryrSLj"
+    },
+    {
+      "id": "cert-28",
+      "title": "Sertifikat Pedagogi & Pendidikan",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1EvaQqBLq6NPWxsij6gepSWmaRtGMo9Ok"
+    },
+    {
+      "id": "cert-29",
+      "title": "Sertifikat Pelatihan Kependidikan",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Ey8_e4AVN60hMooT7G8R6mDa7QgEKXlG"
+    },
+    {
+      "id": "cert-30",
+      "title": "Sertifikat Kualifikasi Pengajar",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Ep155VFLYJNSYg3CEE5Zg_XLQQNOAe0f"
+    },
+    {
+      "id": "cert-31",
+      "title": "Sertifikat Penyusunan Karya Ilmiah",
+      "category": "Karya Ilmiah",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1El2SYRQA3OjQ6xTPvA4nHJOtmz1v4Jv_"
+    },
+    {
+      "id": "cert-32",
+      "title": "Sertifikat Studi Keislaman",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Em8Sp-FIUsMUWrPycLY3P_0uA0oocqWV"
+    },
+    {
+      "id": "cert-33",
+      "title": "Sertifikat Manajemen Wirausaha",
+      "category": "Enterpreneur",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1EcaF4L1zYs8BmdfL-bLlpFGryeKno0HS"
+    },
+    {
+      "id": "cert-34",
+      "title": "Sertifikat Daurah Keislaman",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/16oIdLdNlWnKym-CxadGkznxlTDYygZlS"
+    },
+    {
+      "id": "cert-35",
+      "title": "Sertifikat Metodologi Riset",
+      "category": "Karya Ilmiah",
+      "imageUrl": "https://lh3.googleusercontent.com/d/16cpPmc1bUJOU6KJHVvw2UwFAqCv1uDin"
+    },
+    {
+      "id": "cert-36",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/15mC2WvxeqREz7U3jCi8P20eTzasCthZs"
+    },
+    {
+      "id": "cert-37",
+      "title": "Sertifikat Kecakapan Teknologi",
+      "category": "Teknologi",
+      "imageUrl": "https://lh3.googleusercontent.com/d/15jIj_FhKjFhVcZvfdnTQfbAVoK4xUh07"
+    },
+    {
+      "id": "cert-38",
+      "title": "Sertifikat Inovasi Wirausaha",
+      "category": "Enterpreneur",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1sDyFGScSKZB8RmKCEbslLhiJsHqyAZZA"
+    },
+    {
+      "id": "cert-39",
+      "title": "Sertifikat Seminar Pendidikan",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1qQxqfSejnBiH7yZZKTN5abbRBZJ7tziI"
+    },
+    {
+      "id": "cert-40",
+      "title": "Sertifikat Pemahaman Dinul Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1nNtLjibUdoZcpEm4OvfH8K8uggBpNYff"
+    },
+    {
+      "id": "cert-41",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1g1z7W47gGLIO1Jq7lwtvC3tKouhVVtzN"
+    },
+    {
+      "id": "cert-42",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1fZVzW7xxxCV5AeL-Jl2Zbo-dJvtyjNy3"
+    },
+    {
+      "id": "cert-43",
+      "title": "Sertifikat Program Enterpreneurship",
+      "category": "Enterpreneur",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1ddcx7T78eIaIvWoRalzM57C5RvPFN9EV"
+    },
+    {
+      "id": "cert-44",
+      "title": "Sertifikat Pembinaan Keislaman",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1ceSpV8luH520AjjUP5xmL7J84-O6avzA"
+    },
+    {
+      "id": "cert-45",
+      "title": "Sertifikat Keterampilan Editing & Media",
+      "category": "Editing",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1-UBO6rbGcmmmMVi_zS9Yw64tTSilAicC"
+    },
+    {
+      "id": "cert-46",
+      "title": "Sertifikat Desain & Editing Visual",
+      "category": "Editing",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1-WPEignzpthp_W4K--k2IxzA9w8vpn8b"
+    },
+    {
+      "id": "cert-47",
+      "title": "Sertifikat Kreator Editing Digital",
+      "category": "Editing",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1-VoSjK8hCHoSjyGmOMT4Vns3UEaWce8-"
+    },
+    {
+      "id": "cert-48",
+      "title": "Sertifikat Diklat Kependidikan",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1dcrxlTrq2bpJ7GHbR28CesansXsUAHOH"
+    },
+    {
+      "id": "cert-49",
+      "title": "Sertifikat Pelatihan Pengajar",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1d27tqehlDzTLExASOEQFZB1fDp41t3UR"
+    },
+    {
+      "id": "cert-50",
+      "title": "Sertifikat Workshop Pendidikan",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1coFBBE4mqIMlXf1IXVwG66N505IadJxB"
+    },
+    {
+      "id": "cert-51",
+      "title": "Sertifikat Penerapan Teknologi Digital",
+      "category": "Teknologi",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1cGkAX6-M2h0Y9TXl2rUTt_WAHH3Ns-CV"
+    },
+    {
+      "id": "cert-52",
+      "title": "Sertifikat Pengembangan Sistem Teknologi",
+      "category": "Teknologi",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1c-nS5sCSwCP-xa8hV1prfl986j7OUbv3"
+    },
+    {
+      "id": "cert-53",
+      "title": "Sertifikat Rintisan Bisnis & Wirausaha",
+      "category": "Enterpreneur",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1bov4QT67gpeEgMUU3IdbuTHiG6eZl_Fb"
+    },
+    {
+      "id": "cert-54",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1bOX6qQdxsdfGxY34qEkSacWvXFQ7EUnt"
+    },
+    {
+      "id": "cert-55",
+      "title": "Sertifikat Pendalaman Kajian Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1az0lg3clfe3FtFDsWex5EPOmfCPgfhPm"
+    },
+    {
+      "id": "cert-56",
+      "title": "Sertifikat Strategi Bisnis & Enterpreneur",
+      "category": "Enterpreneur",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1a8j_7GRmTDkM3e1PIoyfXDIuPdCmYCr4"
+    },
+    {
+      "id": "cert-57",
+      "title": "Sertifikat Keislaman & Syariah",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1_Icmj0SuOI7Vq9Wx-fW4FrXM845wblxf"
+    },
+    {
+      "id": "cert-58",
+      "title": "Sertifikat Mentoring Kewirausahaan",
+      "category": "Enterpreneur",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1_HIVh9U_4e6gP0JKINw9XwKIWrDOlPyB"
+    },
+    {
+      "id": "cert-59",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Zf5H5-6VnDZyDZkYr1rOwL4elgYP9Jpi"
+    },
+    {
+      "id": "cert-60",
+      "title": "Sertifikat Self Improvement & Soft Skills",
+      "category": "Self Development",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1ZaJSY6ACD-OgGWqeOmUpYZwSKevgvn4W"
+    },
+    {
+      "id": "cert-61",
+      "title": "Sertifikat Literasi Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Z9_8ZlXw67Um2jJTicmJFYkkFXJrnAgB"
+    },
+    {
+      "id": "cert-62",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1YwDG6qaqlbKHSk5Hb4g6hb5dazWnQO7o"
+    },
+    {
+      "id": "cert-63",
+      "title": "Sertifikat Bootcamp Enterpreneur",
+      "category": "Enterpreneur",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Yn-X5lri_S-keG64FpkxhD-AHYrFbApH"
+    },
+    {
+      "id": "cert-64",
+      "title": "Sertifikat Penguatan Kompetensi Pendidikan",
+      "category": "Pendidikan",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1YPxy_MSnPbvTfNGLRq7VrGsiDO3ar_SE"
+    },
+    {
+      "id": "cert-65",
+      "title": "Sertifikat Kualifikasi Umum",
+      "category": "Umum",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Xa6OKWy3qmJuVNKePp4nTiLwFgp_GEGC"
+    },
+    {
+      "id": "cert-66",
+      "title": "Sertifikat Penulisan Riset Ilmiah",
+      "category": "Karya Ilmiah",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1X4WJ5c8Sv8hLaTrkkY8a2VRLkqxVsSXC"
+    },
+    {
+      "id": "cert-67",
+      "title": "Sertifikat Karya Ilmiah Berbasis Teknologi",
+      "category": "Karya Ilmiah",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1WczKSasCWf_vFJiWwOtuP1jNkKLbCJFc"
+    },
+    {
+      "id": "cert-68",
+      "title": "Sertifikat Pembelajaran Agama Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1VoTf0y7_2tTuRRJl1gZOCaM-ZAxLoj9N"
+    },
+    {
+      "id": "cert-69",
+      "title": "Sertifikat Daurah Kitab Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1VFVbKiepImWdg4kWFCTgQBn8tT8t8gs7"
+    },
+    {
+      "id": "cert-70",
+      "title": "Sertifikat Studi Keislaman & Moral",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1M5h_fAlQPrI84fsZ-M8hmKwt0oSGw2Pu"
+    },
+    {
+      "id": "cert-71",
+      "title": "Sertifikat Pemahaman Syariah Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1OaB5Y22L4s9sImtlJqO3eEwqjq3Kco8O"
+    },
+    {
+      "id": "cert-72",
+      "title": "Sertifikat Seminar Keislaman",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/16KXe7aY-sHdEtf6L_v8oEfLPPH7rVp72"
+    },
+    {
+      "id": "cert-73",
+      "title": "Sertifikat Kajian Tematik Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1HQKpyTGiilvOjeFMxnR4KpUQWwMqgHXl"
+    },
+    {
+      "id": "cert-74",
+      "title": "Sertifikat Pelatihan Editing Video & Grafis",
+      "category": "Editing",
+      "imageUrl": "https://lh3.googleusercontent.com/d/15hwXM-C02e31fQ3nezsjJ-yUjyJT-Hv7"
+    },
+    {
+      "id": "cert-75",
+      "title": "Sertifikat Keilmuan & Syiar Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/118wpdX7U5-3VUslemLLAWNXcs28rU8WR"
+    },
+    {
+      "id": "cert-76",
+      "title": "Sertifikat Kegiatan Kampus & Mahasiswa",
+      "category": "Kampus",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1b_8ulT6QhctLf1LlCyVtCBt6lhl4KElw"
+    },
+    {
+      "id": "cert-77",
+      "title": "Sertifikat Daurah Syariah Islam",
+      "category": "Islam",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1b8GO7YPN7gG4MqF9-1rpqSkxtc5NxYUM"
     }
   ]
 }
