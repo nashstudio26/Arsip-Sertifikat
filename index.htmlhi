@@ -67,99 +67,152 @@
             aspect-ratio: 1.414 / 1;
         }
 
+        /* Skeleton Shimmer Effect for Zero Layout Shift */
+        .skeleton-shimmer {
+            background: linear-gradient(90deg, rgba(228, 228, 231, 0.6) 0%, rgba(244, 244, 245, 0.9) 50%, rgba(228, 228, 231, 0.6) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        .dark .skeleton-shimmer {
+            background: linear-gradient(90deg, rgba(39, 39, 42, 0.6) 0%, rgba(63, 63, 70, 0.9) 50%, rgba(39, 39, 42, 0.6) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
         /* Instant Hardware-Accelerated Backdrop Blur */
         .modal-container {
             will-change: opacity, transform;
         }
+
+        /* Styling container counter agar bersih dan rapi */
+        .visitor-counter-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.85;
+            transition: opacity 0.2s ease;
+        }
+        .visitor-counter-wrapper:hover {
+            opacity: 1;
+        }
+        .visitor-counter-wrapper a {
+            display: none !important; /* Menyembunyikan backlink bawaan counter agar visual tetap bersih */
+        }
     </style>
 </head>
-<body class="bg-[#FAFAFA] dark:bg-[#09090B] text-zinc-800 dark:text-zinc-100 min-h-screen transition-colors duration-200 antialiased pb-20">
+<body class="bg-[#FAFAFA] dark:bg-[#09090B] text-zinc-800 dark:text-zinc-100 min-h-screen transition-colors duration-200 antialiased flex flex-col justify-between">
 
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-30 bg-[#FAFAFA]/80 dark:bg-[#09090B]/80 backdrop-blur-md border-b border-zinc-200/80 dark:border-zinc-800/80 transition-colors duration-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
-            
-            <!-- Brand Logo & Title -->
-            <div class="flex items-center gap-3">
-                <img src="https://lh3.googleusercontent.com/d/1vq1VfVngv9AR1H39I2YOV5_XBvhmXTfX" 
-                     alt="Logo Website" 
-                     onerror="this.onerror=null; this.src='https://placehold.co/100x100/18181b/ffffff?text=NS';"
-                     class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800 shadow-xs">
+    <!-- Wrapper Konten Atas -->
+    <div>
+        <!-- Header Navigation -->
+        <header class="sticky top-0 z-30 bg-[#FAFAFA]/80 dark:bg-[#09090B]/80 backdrop-blur-md border-b border-zinc-200/80 dark:border-zinc-800/80 transition-colors duration-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+                
+                <!-- Brand Logo & Title -->
+                <div class="flex items-center gap-3">
+                    <img src="https://lh3.googleusercontent.com/d/1vq1VfVngv9AR1H39I2YOV5_XBvhmXTfX" 
+                         alt="Logo Website" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/100x100/18181b/ffffff?text=NS';"
+                         class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg object-cover border border-zinc-200 dark:border-zinc-800 shadow-xs">
+                    <div>
+                        <h1 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-zinc-100 leading-none">Arsip Sertifikat</h1>
+                        <p class="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium mt-1 hidden sm:block">Koleksi Lisensi & Penghargaan</p>
+                    </div>
+                </div>
+
+                <!-- Header Controls -->
+                <div class="flex items-center gap-1.5 sm:gap-2">
+                    <!-- Counter Badge -->
+                    <span id="certCounter" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800/80 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700/60 mr-1">
+                        0 Sertifikat
+                    </span>
+
+                    <!-- About Icon Button -->
+                    <button id="aboutToggleBtn" title="Tentang Website" class="p-2 rounded-lg text-zinc-600 dark:text-zinc-300 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/80 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Dark/Light Theme Toggle Button -->
+                    <button id="themeToggleBtn" title="Ganti Mode Gelap/Terang" class="p-2 rounded-lg text-zinc-600 dark:text-zinc-300 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/80 transition-colors">
+                        <svg id="sunIcon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg id="moonIcon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-6xl mx-auto px-3 sm:px-6 pt-3 sm:pt-4">
+            <!-- Compact Section Title & Search -->
+            <div class="mb-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div>
-                    <h1 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-zinc-100 leading-none">Arsip Sertifikat</h1>
-                    <p class="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium mt-1 hidden sm:block">Koleksi Lisensi & Penghargaan</p>
+                    <p class="text-[10px] uppercase tracking-widest font-bold text-zinc-400 dark:text-zinc-500 leading-none">Portfolio & Qualifications</p>
+                    <h2 class="text-lg sm:text-xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight mt-0.5">Dokumentasi & Sertifikasi</h2>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="relative w-full sm:w-60">
+                    <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Cari sertifikat..." class="w-full pl-9 pr-3 py-1.5 text-xs rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600 transition">
                 </div>
             </div>
 
-            <!-- Header Controls -->
-            <div class="flex items-center gap-1.5 sm:gap-2">
-                <!-- Counter Badge -->
-                <span id="certCounter" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800/80 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700/60 mr-1">
-                    0 Sertifikat
-                </span>
-
-                <!-- About Icon Button -->
-                <button id="aboutToggleBtn" title="Tentang Website" class="p-2 rounded-lg text-zinc-600 dark:text-zinc-300 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/80 transition-colors">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                </button>
-
-                <!-- Dark/Light Theme Toggle Button -->
-                <button id="themeToggleBtn" title="Ganti Mode Gelap/Terang" class="p-2 rounded-lg text-zinc-600 dark:text-zinc-300 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/80 transition-colors">
-                    <svg id="sunIcon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                    </svg>
-                    <svg id="moonIcon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <main class="max-w-6xl mx-auto px-3 sm:px-6 pt-3 sm:pt-4">
-        <!-- Compact Section Title & Search -->
-        <div class="mb-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <div>
-                <p class="text-[10px] uppercase tracking-widest font-bold text-zinc-400 dark:text-zinc-500 leading-none">Portfolio & Qualifications</p>
-                <h2 class="text-lg sm:text-xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight mt-0.5">Dokumentasi & Sertifikasi</h2>
+            <!-- Filter Category Pills -->
+            <div class="mb-4 overflow-x-auto no-scrollbar pb-1">
+                <div id="categoryContainer" class="flex items-center gap-1.5 min-w-max">
+                    <!-- Dynamically populated categories -->
+                </div>
             </div>
 
-            <!-- Search Bar -->
-            <div class="relative w-full sm:w-60">
-                <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            <!-- Grid Layout -->
+            <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2.5 sm:gap-4">
+                <!-- Cards populated dynamically -->
+            </div>
+
+            <!-- Infinite Scroll Sentinel & Batch Loader -->
+            <div id="scrollSentinel" class="w-full py-6 flex items-center justify-center">
+                <div id="batchLoader" class="hidden flex items-center gap-2 text-xs text-zinc-400 font-medium">
+                    <div class="w-4 h-4 border-2 border-zinc-300 border-t-zinc-600 dark:border-zinc-700 dark:border-t-zinc-300 rounded-full animate-spin"></div>
+                    <span>Memuat sertifikat lainnya...</span>
+                </div>
+            </div>
+
+            <!-- Empty Search State -->
+            <div id="emptyState" class="hidden text-center py-16 px-4">
+                <svg class="w-12 h-12 mx-auto text-zinc-300 dark:text-zinc-700 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                 </svg>
-                <input type="text" id="searchInput" placeholder="Cari sertifikat..." class="w-full pl-9 pr-3 py-1.5 text-xs rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600 transition">
+                <p class="text-sm font-medium text-zinc-600 dark:text-zinc-400">Tidak ada sertifikat yang ditemukan</p>
+                <p class="text-xs text-zinc-400 dark:text-zinc-500 mt-1">Coba kata kunci atau kategori lain</p>
             </div>
+        </main>
+    </div>
+
+    <!-- Website Global Footer -->
+    <footer class="w-full mt-12 pt-6 pb-8 border-t border-zinc-200/60 dark:border-zinc-800/60 bg-transparent flex flex-col items-center justify-center gap-2.5 text-center">
+        <!-- Visitor Counter Section -->
+        <div class="visitor-counter-wrapper">
+            <a href='https://www.versicherungen.at/auslandsversicherung-rechner/'>Auslandsaufenthalt Versicherung</a>
+            <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=533947f6a241289cc96507fcc693e769b2aa4a07'></script>
+            <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1672283/t/1"></script>
         </div>
 
-        <!-- Filter Category Pills -->
-        <div class="mb-4 overflow-x-auto no-scrollbar pb-1">
-            <div id="categoryContainer" class="flex items-center gap-1.5 min-w-max">
-                <!-- Dynamically populated categories -->
-            </div>
-        </div>
-
-        <!-- 
-            Grid Layout:
-            Mobile (<768px): Strictly 2 columns
-            Desktop: 3 to 5 columns
-        -->
-        <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2.5 sm:gap-4">
-            <!-- Cards populated dynamically -->
-        </div>
-
-        <!-- Empty Search State -->
-        <div id="emptyState" class="hidden text-center py-16 px-4">
-            <svg class="w-12 h-12 mx-auto text-zinc-300 dark:text-zinc-700 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-            <p class="text-sm font-medium text-zinc-600 dark:text-zinc-400">Tidak ada sertifikat yang ditemukan</p>
-            <p class="text-xs text-zinc-400 dark:text-zinc-500 mt-1">Coba kata kunci atau kategori lain</p>
-        </div>
-    </main>
+        <!-- Signature Text -->
+        <p class="text-[11px] sm:text-xs font-medium tracking-wider text-zinc-400 dark:text-zinc-500 uppercase">
+            Developed by Nash Studio
+        </p>
+    </footer>
 
     <!-- Floating Action Button (Ask Question) -->
     <button id="fabBtn" title="Tanyakan Sesuatu" class="fixed bottom-5 right-5 z-40 bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 p-3.5 rounded-full shadow-xl transition-all duration-200 transform hover:scale-105 active:scale-95 flex items-center justify-center border border-zinc-700/20 dark:border-zinc-300/20">
@@ -168,7 +221,7 @@
         </svg>
     </button>
 
-    <!-- Modal 1: Certificate Preview Popup (Instant Blur, Compact Vertical Height) -->
+    <!-- Modal 1: Certificate Preview Popup -->
     <div id="certModal" class="modal-container fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 opacity-0 pointer-events-none transition-opacity duration-150 ease-out">
         <div id="modalBackdrop" class="absolute inset-0 bg-black/60 dark:bg-black/80 backdrop-blur-md"></div>
 
@@ -192,7 +245,7 @@
                 </button>
             </div>
 
-            <!-- Certificate Image Container (Compact Padding to eliminate empty top/bottom) -->
+            <!-- Certificate Image Container -->
             <div class="flex-1 min-h-0 p-2 sm:p-4 bg-zinc-100/60 dark:bg-[#0B0B0D] flex items-center justify-center overflow-auto">
                 <div class="relative max-w-full max-h-full p-1.5 bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200/70 dark:border-zinc-800 shadow-md flex items-center justify-center">
                     <div id="modalLoader" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-zinc-900/80 z-10 rounded-lg">
@@ -202,7 +255,7 @@
                 </div>
             </div>
 
-            <!-- Modal Footer (Clean & Centered) -->
+            <!-- Modal Footer -->
             <div class="px-4 py-2 border-t border-zinc-100 dark:border-zinc-800/80 bg-white dark:bg-[#121215] flex items-center justify-center text-[10px] sm:text-[11px] text-zinc-400 dark:text-zinc-500 font-medium tracking-wide shrink-0">
                 Developed by Nash Studio
             </div>
@@ -359,12 +412,20 @@
         let activeCategory = "Semua";
         let searchQuery = "";
 
+        // Pagination & Infinite Scroll State
+        const BATCH_SIZE = 12;
+        let currentRenderCount = 0;
+        let filteredCertificates = [];
+        let intersectionObserver = null;
+
         // DOM Elements
         const galleryGrid = document.getElementById('galleryGrid');
         const categoryContainer = document.getElementById('categoryContainer');
         const searchInput = document.getElementById('searchInput');
         const emptyState = document.getElementById('emptyState');
         const certCounter = document.getElementById('certCounter');
+        const scrollSentinel = document.getElementById('scrollSentinel');
+        const batchLoader = document.getElementById('batchLoader');
 
         // Certificate Modal Elements
         const certModal = document.getElementById('certModal');
@@ -390,6 +451,16 @@
         const contactBackdrop = document.getElementById('contactBackdrop');
         const closeContactBtn = document.getElementById('closeContactBtn');
         const whatsappForm = document.getElementById('whatsappForm');
+
+        // Helper: Optimize Google Drive URL with dimension parameter
+        function getOptimizedImageUrl(rawUrl, sizeParam = '=w500') {
+            if (!rawUrl) return '';
+            if (rawUrl.includes('lh3.googleusercontent.com/d/')) {
+                const cleanUrl = rawUrl.split('=')[0];
+                return `${cleanUrl}${sizeParam}`;
+            }
+            return rawUrl;
+        }
 
         // Theme Toggle Logic
         const themeToggleBtn = document.getElementById('themeToggleBtn');
@@ -432,7 +503,8 @@
             }
 
             renderCategories();
-            renderGallery();
+            initInfiniteScroll();
+            resetAndRenderGallery();
             renderAboutContent();
         }
 
@@ -464,41 +536,65 @@
         }
 
         function setCategory(cat) {
+            if (activeCategory === cat) return;
             activeCategory = cat;
             renderCategories();
-            renderGallery();
+            resetAndRenderGallery();
         }
 
-        function renderGallery() {
-            const filtered = certificates.filter(cert => {
+        function resetAndRenderGallery() {
+            filteredCertificates = certificates.filter(cert => {
                 const matchesCategory = activeCategory === "Semua" || cert.category === activeCategory;
                 const matchesSearch = cert.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
                                      (cert.category && cert.category.toLowerCase().includes(searchQuery.toLowerCase()));
                 return matchesCategory && matchesSearch;
             });
 
-            certCounter.textContent = `${filtered.length} Sertifikat`;
+            certCounter.textContent = `${filteredCertificates.length} Sertifikat`;
+            galleryGrid.innerHTML = '';
+            currentRenderCount = 0;
 
-            if (filtered.length === 0) {
-                galleryGrid.innerHTML = '';
+            if (filteredCertificates.length === 0) {
                 emptyState.classList.remove('hidden');
+                scrollSentinel.classList.add('hidden');
                 return;
             }
 
             emptyState.classList.add('hidden');
+            scrollSentinel.classList.remove('hidden');
 
-            galleryGrid.innerHTML = filtered.map(cert => `
-                <div onclick="openModal('${cert.id}')" 
-                     class="group relative bg-white dark:bg-[#121215] border border-zinc-200/90 dark:border-zinc-800/90 rounded-xl overflow-hidden cursor-pointer hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200 flex flex-col shadow-xs">
-                    
-                    <div class="relative cert-aspect bg-zinc-100 dark:bg-zinc-900/80 overflow-hidden flex items-center justify-center border-b border-zinc-100 dark:border-zinc-800/60">
-                        <img src="${cert.imageUrl}" 
+            renderNextBatch();
+        }
+
+        function renderNextBatch() {
+            if (currentRenderCount >= filteredCertificates.length) {
+                batchLoader.classList.add('hidden');
+                return;
+            }
+
+            const nextBatch = filteredCertificates.slice(currentRenderCount, currentRenderCount + BATCH_SIZE);
+            const fragment = document.createDocumentFragment();
+
+            nextBatch.forEach(cert => {
+                const card = document.createElement('div');
+                card.className = 'group relative bg-white dark:bg-[#121215] border border-zinc-200/90 dark:border-zinc-800/90 rounded-xl overflow-hidden cursor-pointer hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200 flex flex-col shadow-xs';
+                card.onclick = () => openModal(cert.id);
+
+                const thumbUrl = getOptimizedImageUrl(cert.imageUrl, '=w500');
+
+                card.innerHTML = `
+                    <div class="relative cert-aspect bg-zinc-100 dark:bg-zinc-900 overflow-hidden flex items-center justify-center border-b border-zinc-100 dark:border-zinc-800/60">
+                        <div class="skeleton-shimmer absolute inset-0 z-0"></div>
+                        
+                        <img src="${thumbUrl}" 
                              alt="${cert.title}" 
                              loading="lazy" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/600x424/e2e8f0/475569?text=Sertifikat';"
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out">
+                             decoding="async" 
+                             onload="this.classList.remove('opacity-0'); if(this.previousElementSibling) this.previousElementSibling.style.display='none';"
+                             onerror="this.onerror=null; this.src='https://placehold.co/500x350/e2e8f0/475569?text=Sertifikat'; this.classList.remove('opacity-0');"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300 ease-out opacity-0 z-10 relative">
                         
-                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-20">
                             <span class="bg-white/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-zinc-100 text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full shadow-md backdrop-blur-xs">
                                 Lihat Detail
                             </span>
@@ -515,8 +611,35 @@
                             </h3>
                         </div>
                     </div>
-                </div>
-            `).join('');
+                `;
+                fragment.appendChild(card);
+            });
+
+            galleryGrid.appendChild(fragment);
+            currentRenderCount += nextBatch.length;
+
+            if (currentRenderCount >= filteredCertificates.length) {
+                batchLoader.classList.add('hidden');
+            }
+        }
+
+        // Initialize IntersectionObserver for smooth infinite scroll
+        function initInfiniteScroll() {
+            if (intersectionObserver) intersectionObserver.disconnect();
+
+            intersectionObserver = new IntersectionObserver((entries) => {
+                const first = entries[0];
+                if (first.isIntersecting && currentRenderCount < filteredCertificates.length) {
+                    batchLoader.classList.remove('hidden');
+                    setTimeout(renderNextBatch, 80);
+                }
+            }, {
+                root: null,
+                rootMargin: '250px',
+                threshold: 0.1
+            });
+
+            intersectionObserver.observe(scrollSentinel);
         }
 
         // Certificate Modal Handlers
@@ -533,7 +656,8 @@
                 modalLoader.classList.add('hidden');
                 modalImage.src = 'https://placehold.co/800x600/e2e8f0/475569?text=Gagal+Memuat+Gambar';
             };
-            modalImage.src = cert.imageUrl;
+
+            modalImage.src = getOptimizedImageUrl(cert.imageUrl, '=w1200');
 
             showModal(certModal);
         }
@@ -542,7 +666,7 @@
             hideModal(certModal);
         }
 
-        // About Modal Handlers (Slower smooth tick animation: 2400ms)
+        // About Modal Handlers
         function animateCounter(elementId, targetValue, duration = 2400) {
             const el = document.getElementById(elementId);
             if (!el) return;
@@ -552,7 +676,6 @@
             function update(currentTime) {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
-                // Smooth ease-out quad formula
                 const currentVal = Math.floor(progress * (2 - progress) * targetValue);
                 el.textContent = currentVal.toLocaleString('id-ID');
 
@@ -585,7 +708,7 @@
             hideModal(contactModal);
         }
 
-        // Helper Functions for Modals (Instant Blur activation)
+        // Helper Functions for Modals
         function showModal(modalEl) {
             modalEl.classList.remove('opacity-0', 'pointer-events-none');
             const content = modalEl.querySelector('.transform');
@@ -641,9 +764,10 @@
             }
         });
 
+        // Search input with instant filtering
         searchInput.addEventListener('input', (e) => {
-            searchQuery = e.target.value;
-            renderGallery();
+            searchQuery = e.target.value.trim();
+            resetAndRenderGallery();
         });
 
         window.onload = function() {
